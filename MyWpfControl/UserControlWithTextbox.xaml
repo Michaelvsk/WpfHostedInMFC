@@ -5,8 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyWpfControl"
              mc:Ignorable="d" 
-             d:DesignHeight="20" d:DesignWidth="100">
+             d:DesignHeight="50" d:DesignWidth="350">
     <Grid>
-        <TextBox Text="This text cannot be edited when hosted within MFC app ..."></TextBox>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBox TextWrapping="Wrap" Grid.Row="0" Text="This text cannot be edited when hosted within MFC app ..."></TextBox>
+        <Button Grid.Row="1" Click="Button_Click">Click to open modal dialog</Button>
     </Grid>
 </UserControl>
